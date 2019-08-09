@@ -1,6 +1,6 @@
 package edu.udc.psw;
 
-public class DaraHora {
+public class DataHora {
 	
 	public static void main(String[] args) {
 		Data data= new Data();

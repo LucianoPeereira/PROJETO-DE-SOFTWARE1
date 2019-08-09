@@ -1,30 +1,31 @@
 package edu.udc.psw;
 
-
 public class Data {
 	private int dia;
 	private int mes;
 	private int ano;
-	
+
 	public Data() {
 		setDia(0);
 		setMes(0);
 		setAno(0);
 	}
-	public void iniciaData(int dia,int mes,int ano) {
+
+	public void iniciaData(int dia, int mes, int ano) {
 		setDia(dia);
 		setMes(mes);
 		setAno(ano);
 	}
+
 	public int getDia() {
 		return dia;
 	}
 
 	public void setDia(int dia) {
-		if(dia > 0 && dia <=31 )
+		if (dia > 0 && dia <= 31)
 			this.dia = dia;
 		else
-			this.dia=0;
+			this.dia = 0;
 	}
 
 	public int getMes() {
@@ -32,10 +33,10 @@ public class Data {
 	}
 
 	public void setMes(int mes) {
-		if(mes > 0 && mes <13)
+		if (mes > 0 && mes < 13)
 			this.mes = mes;
 		else
-			this.mes=0;
+			this.mes = 0;
 	}
 
 	public int getAno() {
@@ -43,48 +44,51 @@ public class Data {
 	}
 
 	public void setAno(int ano) {
-		if(ano > 0)
+		if (ano > 0)
 			this.ano = ano;
 		else
-			this.ano=0;
+			this.ano = 0;
 	}
+
 	void mostrarData() {
-		if(dia > 0 && mes > 0 && ano > 0)
-			System.out.printf("%d de %s de %d\n",dia,mesExtenco(mes),ano);
+		if (dia > 0 && mes > 0 && ano > 0)
+			System.out.printf("%d de %s de %d\n", dia, mesExtenco(mes), ano);
 		else
 			System.out.printf("Data Invalida\n");
 	}
+
 	String mesExtenco(int mes) {
-		switch(mes) {
+		switch (mes) {
 		case 1:
-			return "janeiro";
+			return "Janeiro";
 		case 2:
-			return "feverreiro";
+			return "Feverreiro";
 		case 3:
-			return "março";
+			return "Março";
 		case 4:
-			return "abril";
+			return "Abril";
 		case 5:
-			return "maio";
+			return "Maio";
 		case 6:
-			return "junho";
+			return "Junho";
 		case 7:
-			return "julho";
+			return "Julho";
 		case 8:
-			return "agosto";
+			return "Agosto";
 		case 9:
-			return "setembro";
+			return "Setembro";
 		case 10:
-			return "outubro";
+			return "Outubro";
 		case 11:
-			return "novembro";
+			return "Novembro";
 		case 12:
-			return "dezembro";
-			
+			return "Dezembro";
+
 		}
-	return null;
-		
+		return null;
+
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -102,43 +106,46 @@ public class Data {
 			return false;
 		return true;
 	}
-	protected Data clone(){
+
+	protected Data clone() {
 		Data data = new Data();
-		data.dia=dia;
-		data.mes=mes;
-		data.ano=ano;
+		data.dia = dia;
+		data.mes = mes;
+		data.ano = ano;
 		return data;
 	}
+
 	boolean vemAntes() {
-		if(equals(clone()))
+		if (equals(clone()))
 			return true;
 		return false;
 	}
+
 	void dataEValida() {
-		if(mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12) {
-			if(dia > 0 && dia <=31 )
-				System.out.printf("dia valido\n");
-		}if(mes==4 || mes==6 || mes==9 || mes==11) {
-			if(dia > 0 && dia <31 )
-				System.out.printf("dia valido\n");
-		}if(mes==2) {
-			if((ano%4)==0 && (ano%100)!=0 && (ano%400)==0) {
-				if(dia >0 && dia <= 29)
-					System.out.printf("dia valido\n");
-			}else 
-				if(dia>0 && dia <29)
-					System.out.printf("dia valido\n");
+		if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
+			if (dia > 0 && dia <= 31)
+				System.out.printf("Dia valido\n");
 		}
+		if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
+			if (dia > 0 && dia < 31)
+				System.out.printf("Dia valido\n");
+		}
+		if (mes == 2) {
+			if ((ano % 4) == 0 && (ano % 100) != 0 && (ano % 400) == 0) {
+				if (dia > 0 && dia <= 29)
+					System.out.printf("Dia valido\n");
+			} else if (dia > 0 && dia < 29)
+				System.out.printf("Dia valido\n");
+		} else
+			System.out.printf("Dia invalido\n");
+		if (mes > 0 && mes < 13)
+			System.out.printf("Mes valido\n");
 		else
-			System.out.printf("dia invalido\n");
-		if(mes > 0 && mes <13)
-			System.out.printf("mes valido\n");
+			System.out.printf("Mes invalido\n");
+		if (ano > 0)
+			System.out.printf("Ano valido\n");
 		else
-			System.out.printf("mes invalido\n");
-		if(ano > 0)
-			System.out.printf("ano valido\n");
-		else
-			System.out.printf("ano invalido\n");
+			System.out.printf("Ano invalido\n");
 	}
-	
+
 }

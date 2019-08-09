@@ -1,21 +1,21 @@
 package edu.udc.psw;
 
 public abstract class HoraPrecisa extends HoraAproximada {
-	private int centecimo;
+	private int Centesimo;
 	
 	public HoraPrecisa() {
-		setCentecimo(0);
+		setCentesimo(0);
 	}
 	
-	public int getCentecimo() {
-		return centecimo;
+	public int getCentesimo() {
+		return Centesimo;
 	}
 
-	public void setCentecimo(int centecimo) {
+	public void setCentesimo(int centecimo) {
 		if(centecimo >=0)
-			this.centecimo = centecimo;
+			this.Centesimo = centecimo;
 		else
-			this.centecimo=0;
+			this.Centesimo=0;
 	}
 	
 }
