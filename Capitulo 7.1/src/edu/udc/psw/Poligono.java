@@ -3,6 +3,7 @@ package edu.udc.psw;
 public class Poligono {
 
 	private Ponto2D pontos[] = new Ponto2D[10];
+	
 	private int lados;
 
 	public Poligono(int lados) {
@@ -10,11 +11,6 @@ public class Poligono {
 		for (int i = 0; i < lados; i++) {
 			pontos[i] = new Ponto2D(i, i);
 		}
-	}
-
-	@Override
-	public Poligono clone() {
-		return new Poligono(lados);
 	}
 
 	public Ponto2D centro() {

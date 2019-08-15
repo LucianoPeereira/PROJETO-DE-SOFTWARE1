@@ -5,11 +5,6 @@ public class Ponto2D {
 	private double x;
 	private double y;
 
-	public Ponto2D(double x, double y) {
-		this.x = x;
-		this.y = y;
-	}
-
 	public void setX(double x) {
 		this.x = x;
 	}
@@ -29,6 +24,11 @@ public class Ponto2D {
 	public Ponto2D() {
 		x = 0.0;
 		y = 0.0;
+	}
+
+	public Ponto2D(double x, double y) {
+		this.x = x;
+		this.y = y;
 	}
 
 	@Override

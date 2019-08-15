@@ -23,6 +23,11 @@ public class Aplicação {
 		System.out.printf("Nova linha %s\n", l.toString());
 		
 		Retangulo ret = new Retangulo(l);
-		System.out.printf("Retangulo\n Base: %s, ", ret.base());
+		System.out.printf("Retangulo Base: %s, ", ret.base());
+		
+		//Poligono pol = new Poligono(8);
+		//System.out.println(pol);
+		
+		
 	}
 }

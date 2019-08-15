@@ -11,10 +11,6 @@ public class Retangulo {
 		this.l = l;
 	}
 
-	Ponto2D centro() {
-		return l.centro();
-	}
-
 	public double base() {
 		return l.base();
 	}
