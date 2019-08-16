@@ -1,6 +1,6 @@
 package edu.udc.psw;
 
-public class Poligono {
+public class Poligono{
 
 	private Ponto2D pontos[] = new Ponto2D[10];
 	
@@ -25,6 +25,22 @@ public class Poligono {
 		y /= lados;
 
 		return new Ponto2D(x, y);
+	}
+	
+	public String getPontos(int i) {
+		return pontos[i].toString();
+	}
+
+	public void setPontos(Ponto2D[] pontos) {
+		this.pontos = pontos;
+	}
+
+	public int getLados() {
+		return lados;
+	}
+
+	public void setLados(int lados) {
+		this.lados = lados;
 	}
 
 }

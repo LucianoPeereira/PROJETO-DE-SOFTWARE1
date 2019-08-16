@@ -9,12 +9,13 @@ public class Aplicação {
 		Ponto2D p1 = new Ponto2D(2, 4);
 		Ponto2D p2 = new Ponto2D(3, 9);
 
+		System.out.print("Pontos:\n");
 		System.out.println(p1);
 		System.out.println(p2);
 		System.out.printf("Distancia = %.2f\n", p1.distancia(p2));
 
 		Linha l = new Linha(p1, p2); 
-		System.out.printf("Linha %s\n", l.toString());
+		System.out.printf("\nLinha %s\n", l.toString());
 		
 		Ponto2D p3 = new Ponto2D(1,3);
 		System.out.printf("Novo ponto %s\n", p3.toString());
@@ -22,12 +23,13 @@ public class Aplicação {
 	
 		System.out.printf("Nova linha %s\n", l.toString());
 		
-		Retangulo ret = new Retangulo(l);
-		System.out.printf("Retangulo Base: %s, ", ret.base());
+		Retangulo ret = new Retangulo(p1,p3);
+		System.out.printf("\nRetangulo %s\n", ret.toString());
 		
-		//Poligono pol = new Poligono(8);
-		//System.out.println(pol);
-		
-		
+		System.out.print("\nPoligono\n");
+		Poligono pol = new Poligono(10);
+		for(int i=0; i<10; i++) {
+			System.out.println(pol.getPontos(i));
+		}
 	}
 }
