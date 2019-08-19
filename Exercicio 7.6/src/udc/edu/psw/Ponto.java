@@ -35,7 +35,7 @@ public class Ponto {
 		return y;
 	}
 
-	public double distancia(Ponto p) {
-		return Math.sqrt((x - p.x) * (x - p.x) + (y - p.y) * (y - p.y));
+	public float distancia(Ponto p) {
+		return (float)Math.sqrt((x - p.x) * (x - p.x) + (y - p.y) * (y - p.y));
 	}
 }

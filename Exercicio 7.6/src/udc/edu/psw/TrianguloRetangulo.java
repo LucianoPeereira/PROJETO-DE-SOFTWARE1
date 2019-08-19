@@ -23,21 +23,21 @@ public class TrianguloRetangulo implements FiguraGeometrica {
 	}
 
 	public float area() {
-		return (float) ((float) p1.distancia(p2) + p2.distancia(p3) / 2);
+		return ( p1.distancia(p2) + p2.distancia(p3) / 2);
 	}
 
 	@Override
 	public float comprimento() {// Base
-		return (float) p1.distancia(p2);
+		return p1.distancia(p2);
 	}
 
 	@Override
 	public float altura() {
-		return (float) p2.distancia(p3);
+		return p2.distancia(p3);
 	}
 
 	@Override
 	public float perimetro() {
-		return (float) ((float) p1.distancia(p2) + p2.distancia(p3) + p3.distancia(p1));
+		return ( p1.distancia(p2) + p2.distancia(p3) + p3.distancia(p1));
 	}
 }
