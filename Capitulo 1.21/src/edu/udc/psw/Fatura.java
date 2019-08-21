@@ -37,16 +37,16 @@ public class Fatura {
 		return item;
 	}
 	public void setItem(double item) {
-		//if(item<0)
-			//this.item = 22;
-		//else
+		if(item<=0)
+			this.item = 0;
+		else
 			this.item = item;
 	}
 	
-	public double getTotalFatura() {
-		//if(getItem()<0)
-			//return 0;
-		return Fatura = getQuantidade()*getItem();
+	double getTotalFatura() {
+		if(getItem()<0)
+			return 0;
+		return  getQuantidade()*getItem();
 	}
 	
 }
