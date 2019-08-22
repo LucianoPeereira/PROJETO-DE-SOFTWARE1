@@ -1,0 +1,26 @@
+Exercicio 4.1: Questoes
+1. Que tipo de repetição seria apropriada para calcular a soma dos primeiros 100 inteiros positivos?
+R. Um for.
+
+2. Que tipo de repetição seria apropriada para calcular a soma de um número arbitrário de inteiros positivos?
+R. Um while
+
+3. Descreva brevemente como cada uma dessas tarefas poderia ser realizada.
+R.	Na 1ª questão, seria desevolvido um 'for', de indice 'i'(int) com inicio = 0, condição de parada em <100 e incremento de um a um(++). Um variavel 'soma'(int) seria utilizada para somar os valores da seguinte forma:
+soma = soma + i;
+
+	Na 2ª questão, seria utilizado em " Do while" juntamente de duas variaveis 'soma'(int) e valor(int), na qual a condição de parada do loop seria um numero negativo recebido pela variavel 'valor'.
+Do{
+	Entra com valor
+	Ler valor
+	soma = soma + valor
+}while(valor!= -1);
+
+
+4. Qual é a diferença entre pre-incrementar e pós-incrementar uma variável?
+R. 	
+Ex:	Pre-incremento e quando uma variavel e incrementada e no mesmo instante ela recebe essa atualização de valor.
+	int i = 5; int b = ++i; // aqui 'b' vai receber 6 porque o (pré incremento) acontece no momento e nao após.
+
+	Pos-incremento e quando uma variavel e incrementada, porem somente em um instante seguinte que ela adquire o incremento
+	int x = 5; int y = x++; // y vai receber 5 pq o incremento vai valer apos essa linha; int a = x; // aqui "a" vai receber 6.
