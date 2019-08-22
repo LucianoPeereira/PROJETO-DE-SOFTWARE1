@@ -1,4 +1,4 @@
-package edu.udc.psw;
+package mais;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package edu.udc.psw;
+package xis;
 
 public class Xis {
 
