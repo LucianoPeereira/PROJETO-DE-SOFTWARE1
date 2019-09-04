@@ -4,7 +4,6 @@ public class Aplicação {
 	
 	public static void main(String[] args) {
 
-	
 		Retangulo ret = new Retangulo();
 		System.out.printf("Retangulo \nArea: %.2f, Perimetro: %.2f", ret.area(), ret.perimetro());
 		

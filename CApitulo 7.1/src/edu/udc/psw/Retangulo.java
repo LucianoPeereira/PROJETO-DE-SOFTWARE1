@@ -1,7 +1,6 @@
 package edu.udc.psw;
 
 public class Retangulo {
-	private Linha l;
 	private Ponto2D a;
 	private Ponto2D b;
 
@@ -20,25 +19,21 @@ public class Retangulo {
 		b = new Ponto2D(bx, by);
 	}
 
-	@Override
-	public Linha clone() {
-		return new Linha(a, b);
-	}
-
-	public Linha getL() {
-		return l;
-	}
-
-	public void setL(Linha l) {
-		this.l = l;
+	public Retangulo clone() {
+		return new Retangulo(a, b);
 	}
 
 	public double base() {
-		return l.base();
+		if (a.getX() < b.getX()) {
+			return b.getX() - a.getX();
+		}
+		return a.getX() - b.getX();
 	}
 
 	public double altura() {
-		return l.altura();
+		if (a.getY() < b.getY())
+			return b.getY() - a.getY();
+		return a.getY() - b.getY();
 	}
 
 	public double area() {

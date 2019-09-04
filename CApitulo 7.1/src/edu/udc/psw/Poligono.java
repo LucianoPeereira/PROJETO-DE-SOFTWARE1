@@ -1,16 +1,30 @@
 package edu.udc.psw;
 
+import java.util.Scanner;
+
 public class Poligono{
 
 	private Ponto2D pontos[] = new Ponto2D[10];
-	
 	private int lados;
+	
+	Scanner sc = new Scanner(System.in);
 
 	public Poligono(int lados) {
 		this.lados = lados;
+		
 		for (int i = 0; i < lados; i++) {
-			pontos[i] = new Ponto2D(i, i);
+			pontos[i] = new Ponto2D(LerX(i),LerY(i));
 		}
+	}
+	
+	public double LerX(int i) {
+		System.out.printf("Entre com a coordenada X do ponto: %d \n", ++i);
+		return sc.nextDouble();
+	}
+	
+	public double LerY(int i) {
+		System.out.printf("Entre com a coordenada Y do ponto: %d\n", ++i);
+		return sc.nextDouble();
 	}
 
 	public Ponto2D centro() {

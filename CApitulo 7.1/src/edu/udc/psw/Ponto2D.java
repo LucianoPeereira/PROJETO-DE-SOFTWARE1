@@ -44,6 +44,22 @@ public class Ponto2D {
 	public String toString() {
 		return String.format("(%.2f; %.2f)", x, y);
 	}
+	
+	public boolean equals(Object obj) { //Comparando objetos
+		if(obj == null)
+			return false;
+		if(obj.getClass().equals(Ponto2D.class))
+			return false;
+		if(obj == this)//Comparando com ele mesmo
+			return true;
+		
+		if(this.x != ((Ponto2D)obj).x)
+			return false;
+		if(this.y != ((Ponto2D)obj).y)
+			return false;
+		
+		return true;
+	}
 
 	public Ponto2D centro() {
 		return clone();

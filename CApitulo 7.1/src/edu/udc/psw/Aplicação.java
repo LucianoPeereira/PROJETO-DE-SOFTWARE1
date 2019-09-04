@@ -6,8 +6,8 @@ public class Aplicação {
 
 	public static void main(String[] args) {
 
-		Ponto2D p1 = new Ponto2D(2, 4);
-		Ponto2D p2 = new Ponto2D(3, 9);
+		Ponto2D p1 = new Ponto2D(15, 10);
+		Ponto2D p2 = new Ponto2D(5, 5);
 
 		System.out.print("Pontos:\n");
 		System.out.println(p1);
@@ -23,12 +23,15 @@ public class Aplicação {
 	
 		System.out.printf("Nova linha %s\n", l.toString());
 		
-		Retangulo ret = new Retangulo(p1,p3);
-		System.out.printf("\nRetangulo %s\n", ret.toString());
+		System.out.print("\nRetangulo\n");
+		Retangulo ret = new Retangulo(p1,p2);
+		System.out.printf("\nBase %s\n", ret.base());
+		System.out.printf("\nAltura %s\n", ret.altura());
+		System.out.printf("\nRetangulo %s\n", ret.area());
 		
 		System.out.print("\nPoligono\n");
-		Poligono pol = new Poligono(10);
-		for(int i=0; i<10; i++) {
+		Poligono pol = new Poligono(5);
+		for(int i=0; i<5; i++) {
 			System.out.println(pol.getPontos(i));
 		}
 	}
