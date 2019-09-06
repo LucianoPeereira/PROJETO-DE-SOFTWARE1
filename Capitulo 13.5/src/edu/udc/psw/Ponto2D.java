@@ -77,4 +77,16 @@ public class Ponto2D extends FormaGeometrica {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+
+	@Override
+	public float distanciaCentro(Ponto2D a) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public float distanciaFigura(Ponto2D a) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

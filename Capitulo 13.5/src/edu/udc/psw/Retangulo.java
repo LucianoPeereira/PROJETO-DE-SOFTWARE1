@@ -49,8 +49,20 @@ public class Retangulo extends FormaGeometrica{
 				(a.getY()+b.getY())/2);
 	}
 	
+	public float distanciaCentro(Ponto2D p) {
+		return (float) Math.sqrt((centro().getX() - p.getX()) * (centro().getX() - p.getX()) + 
+				(centro().getY() - p.getY()) * (centro().getY() - p.getY()));
+	}
+	
+	public float distanciaFigura(Ponto2D p) {
+		return (float) Math.sqrt((centro().getX() - p.getX()) * (centro().getX() - p.getX()) + 
+				(centro().getY() - p.getY()) * (centro().getY() - p.getY()));
+	}
+
+	
 	@Override
 	public String toString() {
 		return a.toString() + b.toString();
 	}
+	
 }

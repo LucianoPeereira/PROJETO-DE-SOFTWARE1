@@ -29,7 +29,6 @@ public class Linha extends FormaGeometrica {
 				(a.getY()+b.getY())/2);
 	}
 
-
 	public Ponto2D getA() {
 		return new Ponto2D(a.getX(), a.getY());
 	}
@@ -62,6 +61,11 @@ public class Linha extends FormaGeometrica {
 		return (float) Math.abs(a.getX() - b.getX());
 	}
 	
+	public double distanciaP(Ponto2D p) {
+		return Math.sqrt((centro().getX() - p.getX()) * (centro().getX() - p.getX()) + 
+				(centro().getY() - p.getY()) * (centro().getY() - p.getY()));
+	}
+	
 	public double Angulo() {
 		return Math.tan((b.getY() - a.getY())/b.getX() - a.getY());
 	}
@@ -69,6 +73,16 @@ public class Linha extends FormaGeometrica {
 	@Override
 	public String toString() {
 		return a.toString() + b.toString();
+	}
+
+	public float distanciaCentro(Ponto2D a) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public float distanciaFigura(Ponto2D a) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }
