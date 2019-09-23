@@ -16,6 +16,11 @@ public class Aplicação {
 			lista.inserirFim(new Ponto2D(11, 12));
 			lista.inserirFim(new Ponto2D(13, 14));
 			lista.inserirFim(new Ponto2D(15, 16));
+			
+			
+			System.out.println("Pesquisa" + lista.pesquisar(2));
+			lista.remover(2);
+			
 
 
 			System.out.println("Tamanho Lista: " + lista.getTamanho());
