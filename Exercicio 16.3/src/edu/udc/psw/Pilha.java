@@ -2,47 +2,63 @@ package edu.udc.psw;
 
 public class Pilha {
 
-	static final int MAX = 1000;
-	   int top;
-	   int a[] = new int[MAX]; // Define tamanho máximo da pilha   
+	NoPilha topo;
 
-	   // Construtor
-	   Pilha() {
-	      top = -1;
-	   }
+	int tamanho;
 
-	   // Métodos da pilha
-	   boolean isEmpty() {
-	     return (top < 0);
-	   }
-	   boolean push(int x) {
-	      if (top >= (MAX-1)) {
-	         System.out.println("Estouro de Pilha!");
-	         return false;
-	      }
-	      else {
-	         a[++top] = x;
-	         return true;
-	      }
-	   }
-	   int pop() {
-	      if (top < 0) {
-	         System.out.println("Pilha Vazia!");
-	         return 0;
-	      }
-	      else {
-	         int x = a[top--];
-	         return x;
-	      }
-	   }
-	   int peek() {
-	      if (top < 0) {
-	         System.out.println("Pilha Vazia!");
-	         return 0;
-	      }
-	      else {
-	         return a[top];
-	      }
-	   }
-	
+	/* Construtores */
+
+	public Pilha() {
+		topo = null;
+		tamanho = 0;
+	}
+
+	/* Getters e Setters */
+
+	public int getTamanho() { return tamanho; }
+
+	/* Métodos */
+
+	public boolean isVazia() { 
+		/* Verificação de existência de nós na pilha */
+		if (tamanho == 0) return true;
+		else return false;
+	}
+
+	public boolean push(Object obj) { /* Inserir no topo da pilha */
+		NoPilha n = new NoPilha(obj);
+
+		/* Verificar se a pilha é vazia ou não */
+		if (tamanho == 0) {
+			topo = n;
+			n.anterior = null;
+
+			tamanho++;
+			return true;
+		}
+
+		else {
+			n.anterior = topo;
+			topo = n;
+
+			tamanho++;
+			return true;
+		}
+
+	}
+
+	public NoPilha pop() { /* Remover do topo da pilha */
+		
+		/* Verificar a existência de nós no topo da pilha*/
+		if (tamanho > 0) { 
+			NoPilha n = topo;
+			topo = n.anterior;
+
+			tamanho--;
+			return n;
+		}
+
+		/* Pilha vazia */
+		else return null;
+	}
 }

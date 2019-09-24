@@ -15,9 +15,7 @@ public class Aplicação {
 	      novaPilha.push(70);
 	      novaPilha.push(88);
 	      System.out.println("Item de valor " + novaPilha.pop() + " retirado da pilha");
-	      System.out.println("Item restante: " + novaPilha.peek());
 	      System.out.println("Item de valor " + novaPilha.pop() + " retirado da pilha");
-	      System.out.println("Item restante: " + novaPilha.peek()); 
 	   }
 
 }
