@@ -13,7 +13,8 @@ public class Poligono extends FormaGeometrica{
 		this.lados = lados;
 		
 		for (int i = 0; i < lados; i++) {
-			pontos[i] = new Ponto2D(LerX(i),LerY(i));
+			//pontos[i] = new Ponto2D(LerX(i),LerY(i));
+			pontos[i] = new Ponto2D(3, 3);
 		}
 	}
 	
@@ -65,8 +66,7 @@ public class Poligono extends FormaGeometrica{
 
 	@Override
 	public float perimetro() {
-		// TODO Auto-generated method stub
-		return 0;
+		return (float) (lados * Math.sqrt((pontos[0].getX() - pontos[1].getX()) * (pontos[0].getX() - pontos[1].getX()) + (pontos[0].getY() - pontos[1].getY()) * (pontos[0].getY() - pontos[1].getY())));
 	}
 
 	@Override

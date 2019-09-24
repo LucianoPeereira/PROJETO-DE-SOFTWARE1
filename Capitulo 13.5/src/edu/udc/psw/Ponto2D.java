@@ -79,14 +79,14 @@ public class Ponto2D extends FormaGeometrica {
 	}
 
 	@Override
-	public float distanciaCentro(Ponto2D a) {
-		// TODO Auto-generated method stub
-		return 0;
+	public float distanciaCentro(Ponto2D p) {
+		return (float) Math.sqrt((centro().getX() - p.getX()) * (centro().getX() - p.getX()) + 
+				(centro().getY() - p.getY()) * (centro().getY() - p.getY()));
 	}
 
 	@Override
-	public float distanciaFigura(Ponto2D a) {
-		// TODO Auto-generated method stub
-		return 0;
+	public float distanciaFigura(Ponto2D p) {
+		return (float) Math.sqrt((centro().getX() - p.getX()) * (centro().getX() - p.getX()) + 
+				(centro().getY() - p.getY()) * (centro().getY() - p.getY()));
 	}
 }
