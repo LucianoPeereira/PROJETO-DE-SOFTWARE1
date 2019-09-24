@@ -42,6 +42,36 @@ public class Hora {
 			return false;
 		return true;
 	}
+	
+	public boolean eAntes(Object obj) {
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Hora other = (Hora) obj;
+		if (hora > other.hora)
+			return true;
+		if (minutos > other.minutos)
+			return true;
+		if (segundos > other.segundos)
+			return true;
+		return false;
+	}
+
+	public boolean eDepois(Object obj) {
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Hora other = (Hora) obj;
+		if (hora < other.hora)
+			return true;
+		if (minutos < other.minutos)
+			return true;
+		if (segundos < other.segundos)
+			return true;
+		return false;
+	}
 
 	public int getHora() {
 		return hora;

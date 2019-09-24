@@ -20,5 +20,19 @@ public class DataHora {
 		}
 		return false;
 	}
+	
+	public boolean eAntes(Object dataAux, Object horaAux ) {
+		if((data.eAntes(dataAux) == true) && hora.eAntes(horaAux) == true) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean eDepois(Object dataAux, Object horaAux ) {
+		if((data.eDepois(dataAux) == true) && hora.eDepois(horaAux) == true) {
+			return true;
+		}
+		return false;
+	}
 
 }

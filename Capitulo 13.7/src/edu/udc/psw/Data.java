@@ -105,7 +105,37 @@ public class Data {
 			return false;
 		return true;
 	}
+	
+	public boolean eAntes(Object obj) {
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Data other = (Data) obj;
+		if (ano > other.ano)
+			return true;
+		if (dia > other.dia)
+			return true;
+		if (mes > other.mes)
+			return true;
+		return false;
+	}
 
+	public boolean eDepois(Object obj) {
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Data other = (Data) obj;
+		if (ano < other.ano)
+			return true;
+		if (dia < other.dia)
+			return true;
+		if (mes < other.mes)
+			return true;
+		return false;
+	}
+	
 	protected Data clone() {
 		Data data = new Data();
 		data.dia = dia;
