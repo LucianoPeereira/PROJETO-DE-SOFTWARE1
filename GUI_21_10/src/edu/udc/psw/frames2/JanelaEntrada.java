@@ -60,7 +60,7 @@ public class JanelaEntrada extends JFrame {
 			
 		});
 		add(button);
-		setVisible(true);
+		setVisible(true); 
 	}
 
 	// Tratamento de Eventos no JAVA
