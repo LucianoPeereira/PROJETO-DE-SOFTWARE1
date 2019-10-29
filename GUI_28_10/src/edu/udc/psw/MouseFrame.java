@@ -10,7 +10,7 @@ import java.awt.event.MouseMotionListener;
 import javax.swing.*;
 
 public class MouseFrame extends JFrame {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L; 
 	
 	private JPanel mousePanel; // Janela em branco editavel
 	
