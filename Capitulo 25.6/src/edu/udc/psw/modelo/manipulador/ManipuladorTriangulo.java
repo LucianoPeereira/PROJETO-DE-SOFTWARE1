@@ -2,7 +2,14 @@ package edu.udc.psw.modelo.manipulador;
 
 import java.awt.Graphics;
 
+import edu.udc.psw.modelo.Triangulo;
+
 public class ManipuladorTriangulo implements ManipuladorFormaGeometrica {
+	private Triangulo triangulo;
+	
+	public ManipuladorTriangulo(Triangulo t) {
+		triangulo = t;
+	}
 
 	@Override
 	public void click(int x, int y) {

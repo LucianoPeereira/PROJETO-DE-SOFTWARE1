@@ -7,6 +7,7 @@ import javax.swing.border.EmptyBorder;
 
 import edu.udc.psw.modelo.Linha;
 import edu.udc.psw.modelo.Retangulo;
+import edu.udc.psw.modelo.Triangulo;
 import edu.udc.psw.modelo.Ponto2D;
 
 import javax.swing.JMenuBar;
@@ -73,6 +74,15 @@ public class JanelaDesenho extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Retangulo retangulo = new Retangulo();
 				contentPane.setFormaGeometrica(retangulo);
+			}
+		});
+		mnFiguras.add(mntmRetangulo);
+		
+		JMenuItem mntmTriangulo = new JMenuItem("Triângulo");
+		mntmTriangulo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Triangulo triangulo = new Triangulo();
+				contentPane.setFormaGeometrica(triangulo);
 			}
 		});
 		mnFiguras.add(mntmRetangulo);
