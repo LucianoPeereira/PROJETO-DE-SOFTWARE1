@@ -2,6 +2,7 @@ package edu.udc.psw.modelo.manipulador;
 
 import java.awt.Graphics;
 
+import edu.udc.psw.modelo.Ponto2D;
 import edu.udc.psw.modelo.Triangulo;
 
 public class ManipuladorTriangulo implements ManipuladorFormaGeometrica {
@@ -19,19 +20,23 @@ public class ManipuladorTriangulo implements ManipuladorFormaGeometrica {
 
 	@Override
 	public void press(int x, int y) {
-		// TODO Auto-generated method stub
-		
+		Ponto2D p = new Ponto2D(x, y);
+		triangulo.setA(p);
+		p = new Ponto2D(x, y);
+		triangulo.setB(p);
 	}
 
 	@Override
 	public void release(int x, int y) {
-		// TODO Auto-generated method stub
+		Ponto2D p = new Ponto2D(x, y);
+		triangulo.setB(p);
 		
 	}
 
 	@Override
 	public void drag(int x, int y) {
-		// TODO Auto-generated method stub
+		Ponto2D p = new Ponto2D(x, y);
+		triangulo.setB(p);
 		
 	}
 

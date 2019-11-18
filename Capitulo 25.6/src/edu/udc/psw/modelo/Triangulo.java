@@ -13,7 +13,7 @@ public class Triangulo implements FormaGeometrica{
 		b = new Ponto2D();
 		c = new Ponto2D();
 	}
-	
+
 	public Triangulo(Ponto2D a, Ponto2D b, Ponto2D c){
 		this.a = a.clone();
 		this.b = b.clone();
@@ -24,6 +24,30 @@ public class Triangulo implements FormaGeometrica{
 		a = new Ponto2D(ax, ay);
 		b = new Ponto2D(bx, by);
 		c = new Ponto2D(cx, cy);
+	}
+	
+	public Ponto2D getA() {
+		return a;
+	}
+
+	public void setA(Ponto2D a) {
+		this.a = a;
+	}
+
+	public Ponto2D getB() {
+		return b;
+	}
+
+	public void setB(Ponto2D b) {
+		this.b = b;
+	}
+
+	public Ponto2D getC() {
+		return c;
+	}
+
+	public void setC(Ponto2D c) {
+		this.c = c;
 	}
 	
 	@Override
@@ -64,8 +88,7 @@ public class Triangulo implements FormaGeometrica{
 
 	@Override
 	public FormaGeometrica clone() {
-		// TODO Auto-generated method stub
-		return null;
+		return new Triangulo(a, b, c);
 	}
 
 	//@Override
