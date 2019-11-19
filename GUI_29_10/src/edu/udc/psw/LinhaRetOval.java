@@ -13,7 +13,7 @@ public class LinhaRetOval extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	Painel painel;
-	Painel painel2;
+	Painel painel2; 
 
 	public LinhaRetOval() {
 		super("Desenhando formas");
