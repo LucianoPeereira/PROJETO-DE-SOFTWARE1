@@ -6,19 +6,18 @@ public class NoFila {
 
 	/* Construtores */
 
-	NoFila() {
+	NoFila(){
 		this.anterior = null;
 		this.obj = null;
 	}
 
-	NoFila(Object obj) {
+	NoFila(Object obj){
 		this.anterior = null;
 		this.obj = obj;
 	}
 
-	NoFila(NoFila anterior, Object obj) {
+	NoFila(NoFila anterior, Object obj){
 		this.anterior = anterior;
 		this.obj = obj;
 	}
-
 }

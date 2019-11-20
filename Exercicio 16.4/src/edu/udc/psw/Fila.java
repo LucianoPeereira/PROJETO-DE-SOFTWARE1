@@ -1,7 +1,6 @@
 package edu.udc.psw;
 
 public class Fila {
-
 	NoFila inicio;
 	NoFila fim;
 
